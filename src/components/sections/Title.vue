@@ -2,18 +2,19 @@
 
 import { ElIcon } from 'element-plus'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
+import Banner from "./Banner.vue"
 
 // logo地址，没有则置为""即可
-const logo = './logo.png'
+const logo = ''
 
 // 标题
-const title = 'Academic Project Page Template'
+const title = 'Euclid’s Gift: Enhancing Spatial Perception and Reasoning in Vision-Language Models via Geometric Surrogate Tasks'
 
 // 标题颜色
 const title_color = '#000000'
 
 // 标题补充，没有则置为''即可
-const title_supp = ' (Vue based)'
+const title_supp = ''
 
 // 标题补充颜色
 const title_supp_color = '#42B883'
@@ -24,102 +25,125 @@ const btn_color = '#444444'
 // 作者清单（包含作者姓名、头像、主页、地址序号）
 const authors = [
   {
-    name: "Your Name",
-    icon: "./icon/junyaohu.jpg",
-    homepage: "https://junyaohu.github.io/",
-    address_flag: "1,#"
+    name: "Shijie Lian",
+    icon: "",
+    homepage: "https://github.com/LiamLian0727",
+    address_flag: "1,2"
   },
   {
-    name: "Anya Forger",
-    icon: "./icon/anya.jpg",
-    homepage: "https://www.bilibili.com/video/BV1jv4y1P7Bb",
-    address_flag: "2,#"
+    name: "Changti Wu",
+    icon: "",
+    homepage: "https://github.com/ChangtiWu",
+    address_flag: "3,2"
   },
   {
-    name: "BugCat Capoo",
-    icon: "./icon/capoo.webp",
-    homepage: "https://zh.moegirl.org.cn/%E7%8C%AB%E7%8C%AB%E8%99%AB%E5%92%96%E6%B3%A2",
-    address_flag: "1,*"
+    name: "Laurence Tianruo Yang",
+    icon: "",
+    homepage: "",
+    address_flag: "4,1"
+  },
+  {
+    name: "Bin Yu",
+    icon: "",
+    homepage: "https://github.com/yubinCloud",
+    address_flag: "2"
+  },
+  {
+    name: "Hang Yuan",
+    icon: "",
+    homepage: "https://github.com/Faustrazor",
+    address_flag: "3"
+  },
+  {
+    name: "Lei Zhang",
+    icon: "",
+    homepage: "",
+    address_flag: "3"
+  },
+  {
+    name: "Kai Chen",
+    icon: "",
+    homepage: "",
+    address_flag: "5",
   },
 ]
 
 // 地址清单（包含地址名称、头像、主页、地址序号）
 const addresses = [
-  {
+{
     address_flag: "1",
-    name: "Home University",
-    icon: "./icon/home.png",
-    homepage: "https://github.com/hmuniversity"
+    name: "Huazhong University of Science and Technology",
+    icon: "./HUST.jpg",
+    homepage: "https://www.hust.edu.cn/"
   },
   {
     address_flag: "2",
-    name: "IKUN University",
-    icon: "./icon/ikun.avif",
-    homepage: "https://www.bilibili.com/video/BV178411Y7QB"
+    name: "Zhongguancun Academy",
+    icon: "./ZGCA.png",
+    homepage: "http://bjzgca.edu.cn/"
   },
+  {
+    address_flag: "3",
+    name: "East China Normal University",
+    icon: "./ECNU.jpg",
+    homepage: "https://www.ecnu.edu.cn/"
+  },
+  {
+    address_flag: "4",
+    name: "Zhengzhou University",
+    icon: "./ZZU.png",
+    homepage: "https://www.zzu.edu.cn/"
+  },
+  {
+    address_flag: "5",
+    name: "Zhongguancun Institute of Artificial Intelligence",
+    icon: "./ZGCA.png",
+    homepage: "http://bjzgca.edu.cn/"
+  }
 ]
 
 // 共一和通讯提示
 const con_and_corresponding_author = 
-  "#: Equal Contribution. *: Corresponding Author."
-
-// 最新消息
-const news = "🔥 [2024-12-15] This template project is still under development."
+  "*: Corresponding Author."
 
 // 强调内容
 const emphases = [
-  "🎉 [ABCD 2024] Poster",
-  "🥰 欢迎关注“减论”微信公众号/B站/知乎/小红书",
-  "传递人工智能算法科普教育的减约理解",
-  "提升信息效率及认知维度"
+  // "🎉 [ABCD 2024] Poster",
+  // "🥰 欢迎关注“减论”微信公众号/B站/知乎/小红书",
+  // "传递人工智能算法科普教育的减约理解",
+  // "提升信息效率及认知维度"
 ]
 
 // 提供引导资料链接
 const buttons = [
   {
-    disabled: true,
+    disabled: false,
     name: "Paper",
-    component: Document,
-  },
-  {
-    disabled: true,
-    name: "中译版",
+    link: "https://arxiv.org/abs/2505.09xxx",
     component: Document,
   },
   {
     disabled: false,
     name: "Code",
-    link: "https://github.com/JunyaoHu/academic-project-page-template-vue",
+    link: "https://github.com/xxx",
     component: Files,
   },
   {
     disabled: false,
-    name: "Demo",
-    link: "https://junyaohu.github.io/academic-project-page-template-vue",
+    name: "Model",
+    link: "https://huggingface.co/xxx",
     component: MagicStick,
   },
-  {
-    disabled: true,
-    name: "Poster",
-    component: Picture,
-  },
-  {
-    disabled: true,
-    name: "Slide",
-    component: DataAnalysis,
-  },
-  {
-    disabled: false,
-    name: "Video (减论)",
-    link: "https://www.bilibili.com/video/BV15XkgYiE73/",
-    component: Film,
-  },
-  {
-    disabled: false,
-    name: "Video (Tutorial)",
-    link: "https://www.bilibili.com/video/BV1oUrfYzEqZ",
-    component: Film,
-  },
+  // {
+  //   disabled: true,
+  //   name: "Poster",
+  //   component: Picture,
+  // },
+  // {
+  //   disabled: true,
+  //   name: "Slide",
+  //   component: DataAnalysis,
+  // },
 ]
 
 </script>
@@ -127,17 +151,12 @@ const buttons = [
 <template>
   <div>
 
-    <!-- 最新消息提示 -->
+    <!-- 最新消息提示
     <el-row justify="center">
       <el-col :span="24">
-        <el-alert title="🔥 This template is still under development." type="success" />
+        <el-alert title="🔥 This paper has not been formally published yet." type="success" />
       </el-col>
-    </el-row>
-
-    <!-- 文章logo -->
-    <el-row v-if="logo" justify="center">
-      <el-image :src="logo" class="logo" fit="cover" />
-    </el-row>
+    </el-row> -->
 
     <!-- 文章标题 -->
     <el-row justify="center">
@@ -151,7 +170,7 @@ const buttons = [
 
     <!-- 作者名单 -->
     <el-row justify="center">
-      <a :href=author.homepage v-for="author in authors">
+      <a :href=author.homepage v-for="author in authors" target="_blank" rel="noopener noreferrer">
         <el-button class="title-button" type="primary" text>
           <el-avatar v-if="author.icon" :size="40" :src="author.icon" />
           <span class="author">
@@ -163,7 +182,7 @@ const buttons = [
 
     <!-- 地址名单 -->
     <el-row justify="center">
-      <a :href=address.homepage v-for="address in addresses">
+      <a :href=address.homepage v-for="address in addresses" target="_blank" ref="noopener noreferrer">
         <el-button class="title-button" type="primary" text>
           <el-avatar v-if="address.icon" :size="40" :src="address.icon" />
           <span class="address">
@@ -198,6 +217,15 @@ const buttons = [
         </el-row>
       </el-col>
     </el-row>
+
+    <!-- Architecture -->
+    <el-row justify="center">
+    <img 
+      src="/arch.svg" 
+      alt="LS-Mixture SFT Architecture" 
+      style="width: 80%; max-width: 1000px; height: auto;"
+    />
+  </el-row>
 
   </div>
 </template>

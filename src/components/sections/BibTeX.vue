@@ -3,11 +3,14 @@ export default {
   data() {
     return {
       bibtex: [
-        "@article{junyaohu2023template,",
-        "    title={Academic Project Page Template Vue},",
-        "    author={Hu, Junyao},",
-        "    journal={GitHub},",
-        "    year={2023}",
+        "@misc{Euclids_Gift,",
+        "    title={Euclid’s Gift: Enhancing Spatial Perception and Reasoning in Vision-Language Models via Geometric Surrogate Tasks},",
+        "    author={Shijie Lian and Changti Wu and Laurence Tianruo Yang and Hang Yuan and Bin Yu and Lei Zhang and Kai Chen},",
+        "    year={2025},",
+        "    eprint={2505.09xxxx},",
+        "    archivePrefix={arXiv},",
+        "    primaryClass={cs.CL},",
+        "    url={https://arxiv.org/abs/2505.09xxxx}",
         "}",
       ],
     }
