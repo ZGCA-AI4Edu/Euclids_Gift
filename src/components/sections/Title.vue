@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 
 import { ElIcon } from 'element-plus'
+import { Message } from '@element-plus/icons-vue'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
 import Banner from "./Banner.vue"
 
@@ -37,10 +38,11 @@ const authors = [
     address_flag: "3,2"
   },
   {
-    name: "Laurence Tianruo Yang†",
+    name: "Laurence Tianruo Yang",
     icon: "",
     homepage: "",
-    address_flag: "4,1"
+    address_flag: "4,1",
+    isCorresponding: true
   },
   {
     name: "Bin Yu",
@@ -61,10 +63,11 @@ const authors = [
     address_flag: "3"
   },
   {
-    name: "Kai Chen†",
+    name: "Kai Chen",
     icon: "",
     homepage: "",
     address_flag: "5",
+    isCorresponding: true
   },
 ]
 
@@ -101,10 +104,6 @@ const addresses = [
     homepage: "https://zgci.ac.cn//"
   }
 ]
-
-// 共一和通讯提示
-const con_and_corresponding_author = 
-  "*：These authors contributed equally, †：Corresponding author."
 
 // 强调内容
 const emphases = [
@@ -175,7 +174,11 @@ const buttons = [
           <el-button class="title-button" type="primary" text>
             <el-avatar v-if="author.icon" :size="40" :src="author.icon" />
             <span class="author">
-              {{ author.name }}<sup v-if="author.address_flag" class="name_sup">{{ author.address_flag }}</sup>
+              {{ author.name }}
+              <sup v-if="author.address_flag" class="name_sup">{{ author.address_flag }}</sup>
+              <sup v-if="author.isCorresponding" class="name_sup">
+                <el-icon :size="14"><Message /></el-icon>
+              </sup>
             </span>
           </el-button>
         </a>
@@ -199,8 +202,10 @@ const buttons = [
 
     <!-- 共一和通讯提示内容 -->
     <el-row justify="center" class="con-cor">
-        {{ con_and_corresponding_author }}
+      *：These authors contributed equally, 
+      <el-icon :size="14"><Message /></el-icon>：Corresponding author.
     </el-row>
+
 
     <!-- 强调内容 -->
     <el-row justify="center" class="emphasis" v-for="emphasis in emphases">
