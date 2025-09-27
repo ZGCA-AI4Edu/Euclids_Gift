@@ -227,8 +227,8 @@ const buttons = [
     <!-- Architecture -->
     <el-row justify="center">
     <img 
-      src="/arch.svg" 
-      alt="LS-Mixture SFT Architecture" 
+      src="/arch.png" 
+      alt="Enhancing Spatial Perception and Reasoning Capabilities in Models Using the Geometric Problem-Solving Dataset (Euclid30K)." 
       style="width: 80%; max-width: 1000px; height: auto;"
     />
   </el-row>
