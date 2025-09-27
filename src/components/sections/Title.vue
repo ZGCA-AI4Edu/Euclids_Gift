@@ -207,9 +207,10 @@ const buttons = [
 
     <!-- 共一和通讯提示内容 -->
     <el-row justify="center" class="con-cor">
-      <el-icon :size="14"><Star /></el-icon>：These authors contributed equally, 
-      <el-icon :size="14"><Message /></el-icon>：Corresponding author.
+      <el-icon :size="14" style="margin-right:4px;"><Star /></el-icon> These authors contributed equally, 
+      <el-icon :size="14" style="margin:0 4px;"><Message /></el-icon> Corresponding author.
     </el-row>
+
 
     <!-- 强调内容 -->
     <el-row justify="center" class="emphasis" v-for="emphasis in emphases">
