@@ -43,12 +43,6 @@ const authors = [
     address_flag: "4,1"
   },
   {
-    name: "<br>",
-      icon: "",
-      homepage: "",
-      address_flag: ""
-  },
-  {
     name: "Bin Yu",
     icon: "",
     homepage: "https://github.com/yubinCloud",
@@ -131,12 +125,12 @@ const buttons = [
   {
     disabled: false,
     name: "Code",
-    link: "https://github.com/xxx",
+    link: "https://github.com/LiamLian0727/Euclids_Gift",
     component: Files,
   },
   {
     disabled: false,
-    name: "Model",
+    name: "Dataset",
     link: "https://huggingface.co/xxx",
     component: MagicStick,
   },
@@ -176,15 +170,20 @@ const buttons = [
 
     <!-- 作者名单 -->
     <el-row justify="center">
-      <a :href=author.homepage v-for="author in authors" target="_blank" rel="noopener noreferrer">
-        <el-button class="title-button" type="primary" text>
-          <el-avatar v-if="author.icon" :size="40" :src="author.icon" />
-          <span class="author">
-            {{ author.name }}<sup v-if="author.address_flag" class="name_sup">{{ author.address_flag }}</sup>
-          </span>
-        </el-button>
-      </a>
+      <template v-for="(author, idx) in authors">
+        <a :href="author.homepage" target="_blank" rel="noopener noreferrer">
+          <el-button class="title-button" type="primary" text>
+            <el-avatar v-if="author.icon" :size="40" :src="author.icon" />
+            <span class="author">
+              {{ author.name }}<sup v-if="author.address_flag" class="name_sup">{{ author.address_flag }}</sup>
+            </span>
+          </el-button>
+        </a>
+        <!-- 在 Yang 后面插一个换行 -->
+        <br v-if="author.name.includes('Laurence Tianruo Yang')" />
+      </template>
     </el-row>
+
 
     <!-- 地址名单 -->
     <el-row justify="center">
