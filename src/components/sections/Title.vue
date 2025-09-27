@@ -25,22 +25,28 @@ const btn_color = '#444444'
 // 作者清单（包含作者姓名、头像、主页、地址序号）
 const authors = [
   {
-    name: "Shijie Lian",
+    name: "Shijie Lian*",
     icon: "",
     homepage: "https://github.com/LiamLian0727",
     address_flag: "1,2"
   },
   {
-    name: "Changti Wu",
+    name: "Changti Wu*",
     icon: "",
     homepage: "https://github.com/ChangtiWu",
     address_flag: "3,2"
   },
   {
-    name: "Laurence Tianruo Yang",
+    name: "Laurence Tianruo Yang†",
     icon: "",
     homepage: "",
     address_flag: "4,1"
+  },
+  {
+    name: "<br>",
+      icon: "",
+      homepage: "",
+      address_flag: ""
   },
   {
     name: "Bin Yu",
@@ -61,7 +67,7 @@ const authors = [
     address_flag: "3"
   },
   {
-    name: "Kai Chen",
+    name: "Kai Chen†",
     icon: "",
     homepage: "",
     address_flag: "5",
@@ -79,7 +85,7 @@ const addresses = [
   {
     address_flag: "2",
     name: "Zhongguancun Academy",
-    icon: "./ZGCA.png",
+    icon: "./ZGC.jpg",
     homepage: "http://bjzgca.edu.cn/"
   },
   {
@@ -97,14 +103,14 @@ const addresses = [
   {
     address_flag: "5",
     name: "Zhongguancun Institute of Artificial Intelligence",
-    icon: "./ZGCA.png",
-    homepage: "http://bjzgca.edu.cn/"
+    icon: "./ZGCA.jpg",
+    homepage: "https://zgci.ac.cn//"
   }
 ]
 
 // 共一和通讯提示
 const con_and_corresponding_author = 
-  "*: Corresponding Author."
+  "*：These authors contributed equally, †：Corresponding author."
 
 // 强调内容
 const emphases = [
