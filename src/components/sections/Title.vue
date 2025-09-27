@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import { ElIcon } from 'element-plus'
-import { Message } from '@element-plus/icons-vue'
+import { Message, Star } from '@element-plus/icons-vue'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
 import Banner from "./Banner.vue"
 
@@ -26,16 +26,18 @@ const btn_color = '#444444'
 // 作者清单（包含作者姓名、头像、主页、地址序号）
 const authors = [
   {
-    name: "Shijie Lian*",
+    name: "Shijie Lian",
     icon: "",
     homepage: "https://github.com/LiamLian0727",
-    address_flag: "1,2"
+    address_flag: "1,2",
+    isEqual: true
   },
   {
-    name: "Changti Wu*",
+    name: "Changti Wu",
     icon: "",
     homepage: "https://github.com/ChangtiWu",
-    address_flag: "3,2"
+    address_flag: "3,2",
+    isEqual: true
   },
   {
     name: "Laurence Tianruo Yang",
@@ -176,6 +178,9 @@ const buttons = [
             <span class="author">
               {{ author.name }}
               <sup v-if="author.address_flag" class="name_sup">{{ author.address_flag }}</sup>
+              <sup v-if="author.isEqual" class="name_sup">
+                <el-icon :size="14"><Star /></el-icon>
+              </sup>
               <sup v-if="author.isCorresponding" class="name_sup">
                 <el-icon :size="14"><Message /></el-icon>
               </sup>
@@ -202,10 +207,9 @@ const buttons = [
 
     <!-- 共一和通讯提示内容 -->
     <el-row justify="center" class="con-cor">
-      *：These authors contributed equally, 
+      <el-icon :size="14"><Star /></el-icon>：These authors contributed equally, 
       <el-icon :size="14"><Message /></el-icon>：Corresponding author.
     </el-row>
-
 
     <!-- 强调内容 -->
     <el-row justify="center" class="emphasis" v-for="emphasis in emphases">
